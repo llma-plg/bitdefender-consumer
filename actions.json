@@ -1,0 +1,42 @@
+[
+  {
+    "name": "list-security-plans",
+    "description": "Retrieves all available Bitdefender consumer security subscription plans including Individual and Family tiers, returning an array of plan objects with name, pricing, key features, and category.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "Optional filter by plan category such as 'All-in-One', 'Device Security', or 'Privacy'."
+        },
+        "plan_type": {
+          "type": "string",
+          "description": "Filter by 'individual' or 'family' plan type.",
+          "enum": ["individual", "family"]
+        }
+      },
+      "required": []
+    },
+    "annotations": {
+      "title": "List Security Plans",
+      "readOnlyHint": true,
+      "openWorldHint": false
+    },
+    "widget_type": "EDS",
+    "eds_widget": {
+      "script_url": "https://main--bitdefender-consumer-eds--llma-plg.aem.page/scripts/aem-embed.js",
+      "widget_embed_url": "https://main--bitdefender-consumer-eds--llma-plg.aem.page/content/list-security-plans-demo"
+    },
+    "tool_meta": {
+      "openai/widgetAccessible": true
+    },
+    "resource_meta": {
+      "ui": {
+        "csp": {
+          "connectDomains": ["https://main--bitdefender-consumer-eds--llma-plg.aem.page"],
+          "resourceDomains": ["https://main--bitdefender-consumer-eds--llma-plg.aem.page"]
+        }
+      }
+    }
+  }
+]
