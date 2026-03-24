@@ -1,0 +1,23 @@
+{
+  "actions": [
+    {
+      "name": "echo",
+      "title": "Echo",
+      "description": "A simple utility that echoes back the input message.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The message to echo back"
+          }
+        },
+        "required": ["message"]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true
+      }
+    }
+  ]
+}

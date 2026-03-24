@@ -1,0 +1,23 @@
+{
+  "actions": [
+    {
+      "name": "echo",
+      "title": "Echo",
+      "description": "A simple utility that echoes back the input message. Useful for testing connectivity, debugging, or confirming that the MCP server is responding correctly.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The message you want to echo back"
+          }
+        },
+        "required": ["message"]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true
+      }
+    }
+  ]
+}
